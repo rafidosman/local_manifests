@@ -18,19 +18,19 @@ rm -rf .repo/project-objects/LineageOS/android_external_chromium-webview_prebuil
 # Add local_manifests
 rm -rf .repo/local_manifests
 mkdir -p .repo/local_manifests
-curl https://gitlab.com/itsvixano-dev/local_manifests/-/raw/main/lineage-${LOS_VERSION_SHORT}.xml -o .repo/local_manifests/lineage.xml
-curl https://gitlab.com/itsvixano-dev/local_manifests/-/raw/main/extra.xml -o .repo/local_manifests/extra.xml
+curl https://raw.githubusercontent.com/rafidosman/local_manifests/main/lineage-20.xml -o .repo/local_manifests/lineage.xml
+
 # Sync
 repo sync -c --force-sync --no-tags --no-clone-bundle -j$(nproc --all) --optimized-fetch --prune
 repo forall external/chromium-webview/prebuilt/* -c "git lfs pull"
 
 ## Build
 # Init envsetup
-. vendor/extra/build/envsetup.sh -p
+#. vendor/extra/build/envsetup.sh -p
 # Build
-for device in ${devices[@]}; do
-    echo "Build for ${device}"
-    sleep 3
-    mka_build ${device} -r
-done
+#for device in ${devices[@]}; do
+#    echo "Build for ${device}"
+#    sleep 3
+#    mka_build ${device} -r
+#done
 
