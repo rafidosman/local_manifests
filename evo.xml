@@ -6,7 +6,8 @@
             revision="thirteen" />
   
     <remote name="github-local"
-      fetch="https://github.com/" />
+            fetch="https://github.com/"
+            revision="lineage-20.0" />
 
   <remote  name="hughjass"
            fetch="https://github.com/" />
