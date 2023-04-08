@@ -2,6 +2,9 @@
 
 # Build script for my build "for personal usage only"
 
+START=`date +%s`
+BUILD_DATE="$(date +%Y%m%d)"
+
 devices=(
     "pstar"
 )
@@ -40,10 +43,6 @@ mka evolution
 #    sleep 3
 #    mka_build ${device} -r
 #done
-
-START=`date +%s`
-BUILD_DATE="$(date +%Y%m%d)"
-
 
 END=`date +%s`
 ELAPSEDM=$(($(($END-$START))/60))
