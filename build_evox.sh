@@ -22,7 +22,7 @@ sed -i "/\platform\/hardware\/qcom\/sm8150\/media/d" .repo/manifests/default.xml
 sed -i "/\platform\/hardware\/qcom\/sm8150\/display/d" .repo/manifests/default.xml
 sed -i "/\platform\/hardware\/qcom\/sm8150\/data\/ipacfg-mgr/d" .repo/manifests/default.xml
 sed -i "/\hardware\/qcom\/sm8150\/Android.mk/d" .repo/manifests/default.xml
-sed -i "/\hardware\/qcom\/sm8150\/Android.bp/d" .repo/manifests/default.xml
+sed -i "/\hardware\/qcom\/sm8150\/Android.bp.*/{N;/\n<*/d}" .repo/manifests/default.xml
 sed -i "/\platform\/hardware\/google\/pixel/d" .repo/manifests/default.xml
 sed -i "/\platform\/hardware\/google\/pixel-sepolicy/d" .repo/manifests/default.xml
 
