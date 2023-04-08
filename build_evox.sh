@@ -30,6 +30,10 @@ repo sync -c --force-sync --no-clone-bundle --no-tags -j$(nproc --all)
 ## Build
 # Init envsetup
 #. vendor/extra/build/envsetup.sh -p
+. build/envsetup.sh
+lunch evolution_redfin_userdebug
+make -j$(nproc --all) installclean
+mka evolution
 # Build
 #for device in ${devices[@]}; do
 #    echo "Build for ${device}"
@@ -37,3 +41,13 @@ repo sync -c --force-sync --no-clone-bundle --no-tags -j$(nproc --all)
 #    mka_build ${device} -r
 #done
 
+START=`date +%s`
+BUILD_DATE="$(date +%Y%m%d)"
+
+
+END=`date +%s`
+ELAPSEDM=$(($(($END-$START))/60))
+ELAPSEDS=$(($(($END-$START))-$ELAPSEDM*60))
+
+echo "--> Build script completed in $ELAPSEDM minutes and $ELAPSEDS seconds"
+echo
