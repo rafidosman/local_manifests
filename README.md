@@ -1,3 +1,3 @@
 # local_manifests
 
-## My Personal Local Manifest LineageOS Build
+## My Personal Local Manifest build
