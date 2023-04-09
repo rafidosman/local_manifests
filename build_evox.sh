@@ -12,24 +12,25 @@ initRepos() {
 # Init Evolution-X repos
 echo "-->> repo init"
 repo init -u https://github.com/Evolution-X/manifest -b tiramisu
-echo
+
 
 #remove sync project from Evolution-X manifest
-echo "remove unwanted project"
-sed -i "/\platform\/hardware\/qcom\/sm7250\/media/d" .repo/manifests/default.xml
-sed -i "/\platform\/hardware\/qcom\/sm7250\/display/d" .repo/manifests/default.xml
-sed -i "/\platform\/hardware\/qcom\/sm8150\/media/d" .repo/manifests/default.xml
-sed -i "/\platform\/hardware\/qcom\/sm8150\/display/d" .repo/manifests/default.xml
-sed -i "/\platform\/hardware\/qcom\/sm8150\/data\/ipacfg-mgr/d" .repo/manifests/default.xml
-sed -i "/\hardware\/qcom\/sm8150\/Android.mk/d" .repo/manifests/default.xml
-sed -i "/\hardware\/qcom\/sm8150\/Android.bp.*/{N;/\n<*/d}" .repo/manifests/default.xml
-sed -i "/\platform\/hardware\/google\/pixel/d" .repo/manifests/default.xml
-sed -i "/\platform\/hardware\/google\/pixel-sepolicy/d" .repo/manifests/default.xml
+#echo "remove unwanted project"
+#sed -i "/\platform\/hardware\/qcom\/sm7250\/media/d" .repo/manifests/default.xml
+#sed -i "/\platform\/hardware\/qcom\/sm7250\/display/d" .repo/manifests/default.xml
+#sed -i "/\platform\/hardware\/qcom\/sm8150\/media/d" .repo/manifests/default.xml
+#sed -i "/\platform\/hardware\/qcom\/sm8150\/display/d" .repo/manifests/default.xml
+#sed -i "/\platform\/hardware\/qcom\/sm8150\/data\/ipacfg-mgr/d" .repo/manifests/default.xml
+#sed -i "/\hardware\/qcom\/sm8150\/Android.mk/d" .repo/manifests/default.xml
+#sed -i "/\hardware\/qcom\/sm8150\/Android.bp.*/{N;/\n<*/d}" .repo/manifests/default.xml
+#sed -i "/\platform\/hardware\/google\/pixel/d" .repo/manifests/default.xml
+#sed -i "/\platform\/hardware\/google\/pixel-sepolicy/d" .repo/manifests/default.xml
 
 # Add local_manifests
 rm -rf .repo/local_manifests
 mkdir -p .repo/local_manifests
 curl https://raw.githubusercontent.com/rafidosman/local_manifests/main/evo.xml -o .repo/local_manifests/evo.xml
+echo
 }
 
 

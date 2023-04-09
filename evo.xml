@@ -1,35 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-    <remote name="gitlab-local"
-            fetch="https://gitlab.pixelexperience.org/"
-            revision="thirteen" />
-  
     <remote name="github-local"
             fetch="https://github.com/"
-            revision="lineage-20.0" />
-
-  <remote  name="hughjass"
-           fetch="https://github.com/" />
+            revision="lineage-20" />
     
     <!-- hardware -->
-    <project path="hardware/qcom/sm7250/display" name="LineageOS/android_hardware_qcom_sm7250_display" remote="github-local" />
-    <project path="hardware/qcom/sm7250/media" name="LineageOS/android_hardware_qcom_sm7250_media" remote="github-local" />
-    <project path="hardware/qcom/sm8150/display" name="LineageOS/android_hardware_qcom_sm8150_display" remote="github-local" />
-    <project path="hardware/qcom/sm8150/media" name="LineageOS/android_hardware_qcom_sm8150_media" remote="github-local" />
-    <project path="hardware/qcom/sm8150/data/ipacfg-mgr" name="LineageOS/android_hardware_qcom_sm8150_data_ipacfg-mgr" remote="github-local" />
-    <project path="hardware/google/pixel" name="LineageOS/android_hardware_google_pixel" remote="github-local" />
-    <project path="hardware/google/pixel-sepolicy" name="LineageOS/android_hardware_google_pixel-sepolicy" remote="github-local" />
 
     <!-- vendor (sm7250) -->
-    <project path="vendor/google/redfin" name="android/vendor-blobs/vendor_google_redfin" remote="gitlab-local" />
+    <project path="vendor/google/redfin" name="rafidosman/vendor_google_redfin" remote="github-local" />
 
     <!-- device (redbull) -->
-    <project path="device/google/redfin" name="HubertVonJass/android_device_google_redfin_13" remote="hughjass" />
-    <project path="device/google/redbull" name="HubertVonJass/android_device_google_redbull_13" remote="hughjass" />
+    <project path="device/google/redfin" name="rafidosman/android_device_google_redfin" remote="github-local" />
+    <project path="device/google/redbull" name="rafidosman/android_device_google_redbull" remote="github-local" />
 
     <!-- kernel (redbull) -->
-    <project path="kernel/google/redbull" name="HubertVonJass/android_kernel_google_redbull_13" remote="hughjass" />
+    <project path="kernel/google/redbull" name="rafidosman/android_kernel_google_redbull" remote="github-local" />
 
 </manifest>
 
