@@ -51,7 +51,7 @@ echo
 
 buildRom() {
 echo "Building rom"
-lunch evolution_redfin_userdebug
+lunch evolution_redfin-userdebug
 make -j$(nproc --all) installclean
 mka evolution
 echo
