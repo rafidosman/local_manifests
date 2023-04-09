@@ -12,15 +12,11 @@
     <!-- remove hardware -->
       <remove-project name="platform/hardware/qcom/sm7250/media" />
       <remove-project name="platform/hardware/qcom/sm7250/display" />
-      <remove-project name="platform/hardware/qcom/sm8150/display" />
-      <remove-project name="platform/hardware/qcom/sm8150/media" />
-      <remove-project name="platform/hardware/qcom/sm8150/data/ipacfg-mgr" />
+      <remove-project name="platform/hardware/qcom/sm8150" />
     
     <!-- add LineageOS hardware -->
       <project path="hardware/qcom/sm7250/display" name="android_hardware_qcom_sm7250_display" remote="github-lineage" />
       <project path="hardware/qcom/sm7250/media" name="android_hardware_qcom_sm7250_media" remote="github-lineage" />
-      <project path="hardware/qcom/sm8150/media" name="android_hardware_qcom_sm8150_media" remote="github-lineage" />
-      <project path="hardware/qcom/sm8150/data/ipacfg-mgr" name="android_hardware_qcom_sm8150_data_ipacfg-mgr" remote="github-lineage" />
 
     <!-- vendor (sm7250) -->
     <project path="vendor/google/redfin" name="rafidosman/vendor_google_redfin" remote="github-local" />
