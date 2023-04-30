@@ -22,8 +22,9 @@
     <!-- extras (LineageOS) -->
     <project path="system/qcom" name="LineageOS/android_system_qcom" remote="github-local" revision="lineage-20" />
 
-    <!-- extras (patches) -->
+    <!-- extras -->
     <project path="build/patches" name="rafidosman/lineageos_patches" remote="github-local" revision="lineage-20" />
+    <project path="vendor/extra" name="rafidosman/android_vendor_extra" remote="github-local" revision="lineage-20" />
 
 </manifest>
 
