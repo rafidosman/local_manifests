@@ -11,6 +11,7 @@ LOS_VERSION=20.0
 LOS_VERSION_SHORT=20
 # Init LineageOS repos
 repo init -u https://github.com/LineageOS/android.git --depth=1 -b lineage-${LOS_VERSION} --git-lfs
+git lfs install
 # Resync webview
 rm -rf external/chromium-webview/prebuilt/*
 rm -rf .repo/projects/external/chromium-webview/prebuilt/*.git
