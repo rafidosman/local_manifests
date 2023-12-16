@@ -5,6 +5,7 @@ set -e
 
 devices=(
     "pstar"
+#    "redfin"
 )
 
 initRepos() {
@@ -84,9 +85,9 @@ echo
 
 signBuild()  {
 echo "-->> signing build" 
-rm -rf /home/fido/test/keys
+rm -rf /home/fido/android_build_keys/keys
 bash /home/fido/init.sh
-cp -r /home/fido/test/keys lineageos20/vendor/extra/ 
+cp -r /home/fido/android_build_keys/keys lineageos20/vendor/extra/ 
 sed -i "1s;^;PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/extra/keys/releasekey\nPRODUCT_OTA_PUBLIC_KEYS := vendor/extra/keys/releasekey\n\n;" "vendor/lineage/config/common.mk"
 sed -i "1s;^;PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/extra/keys/releasekey\nPRODUCT_OTA_PUBLIC_KEYS := vendor/extra/keys/releasekey\n\n;" "vendor/extra/product.mk" 
 }
