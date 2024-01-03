@@ -5,6 +5,10 @@
             fetch="https://github.com/"
             revision="lineage-20" />
 
+    <remote name="gitlab-gos"
+            fetch="https://gitlab.com/grapheneos/"
+            revision="13">
+
     <!-- hardware -->
     <project path="hardware/motorola" name="LineageOS/android_hardware_motorola" remote="github-local" />
 
@@ -35,6 +39,7 @@
     <!-- extras -->
     <project path="build/patches" name="rafidosman/lineageos_patches" remote="github-local" revision="lineage-20" />
     <project path="vendor/extra" name="rafidosman/android_vendor_extra" remote="github-local" revision="lineage-20" />
+    <project path="external/vanadium" name="platform_external_vanadium.git" remote="gitlab-gos" clone-depth="1" />
 
 </manifest>
 
