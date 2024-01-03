@@ -7,7 +7,7 @@
 
     <remote name="gitlab-gos"
             fetch="https://gitlab.com/grapheneos/"
-            revision="13">
+            revision="13" />
 
     <!-- hardware -->
     <project path="hardware/motorola" name="LineageOS/android_hardware_motorola" remote="github-local" />
